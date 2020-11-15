@@ -3,7 +3,7 @@ Tento program filtruje dotazy typu A směřující na domény v rámci dodaného
 
 ## Příklady spuštění
 
-$ make run
+$ make run        
 $ sudo ./dns -h       
 $ sudo ./dns -v -s 8.8.8.8 -f filter.txt             
 $ sudo ./dns -s 1.0.0.1 -f file           
