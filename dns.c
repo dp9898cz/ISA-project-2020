@@ -22,7 +22,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <arpa/nameser.h>
-#include <linux/ip.h>
+//#include <linux/ip.h>
 #include <netinet/udp.h>
 
 // size for recvfrom() buffer
@@ -194,12 +194,14 @@ void printIp(unsigned int ip, int port) {
  * @param answer Bool whether to print query (0) or answer (1)
  */
 void printVerboseEntry(unsigned int inIp, int inPort, char* type, char *name, unsigned int outIp, int outPort, bool answer) {
-	if (answer) {
-		printIp(outIp, outPort); printVerbose("\t<--\t"); printIp(inIp, inPort);
-	} else {
-		printIp(inIp, inPort); printVerbose("\t-->\t"); printIp(outIp, outPort);
+	if (verbose) {
+		if (answer) {
+			printIp(outIp, outPort); printVerbose("\t<--\t"); printIp(inIp, inPort);
+		} else {
+			printIp(inIp, inPort); printVerbose("\t-->\t"); printIp(outIp, outPort);
+		}
+		printVerbose("\t");	printVerbose(type);	printVerbose(":\t"); printVerbose(name); printVerbose("\n");
 	}
-	printVerbose("\t");	printVerbose(type);	printVerbose(":\t"); printVerbose(name); printVerbose("\n");
 }
 
 /**
