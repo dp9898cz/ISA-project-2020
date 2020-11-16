@@ -1,5 +1,5 @@
 # Filtrující DNS resolver - Projekt do ISA 2020
-Tento program filtruje dotazy typu A směřující na domény v rámci dodaného seznamu a filtruje také jejich poddomény. Podporuje pouze komunikaci prostřednictvím protokolu UDP a dotazy typu A. Nepodporuje DNSSEC.
+Tento program filtruje dotazy typu A směřující na domény v rámci dodaného seznamu a filtruje také jejich poddomény. Podporuje pouze komunikaci prostřednictvím protokolu UDP a na síťové vrstvě Ipv4 a dotazy typu A. Nepodporuje DNSSEC.
 
 ## Příklady spuštění
 
